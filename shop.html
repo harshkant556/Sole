@@ -30,13 +30,24 @@
   <div class="shop-layout">
     <div class="shop-sidebar">
       <div class="filter-title">FILTER</div>
-      <div class="filter-group"><span class="filter-label">Category</span><label class="filter-option"><input type="checkbox" checked> Sneakers</label><label class="filter-option"><input type="checkbox"> Boots</label><label class="filter-option"><input type="checkbox"> Heels</label><label class="filter-option"><input type="checkbox"> Formals</label><label class="filter-option"><input type="checkbox"> Sandals</label></div>
-      <div class="filter-group"><span class="filter-label">Size (UK)</span><label class="filter-option"><input type="checkbox"> 6</label><label class="filter-option"><input type="checkbox" checked> 7</label><label class="filter-option"><input type="checkbox" checked> 8</label><label class="filter-option"><input type="checkbox"> 9</label><label class="filter-option"><input type="checkbox"> 10</label></div>
-      <div class="filter-group"><span class="filter-label">Price Range</span><label class="filter-option"><input type="checkbox"> Under ₹5,000</label><label class="filter-option"><input type="checkbox" checked> ₹5,000 – ₹10,000</label><label class="filter-option"><input type="checkbox"> Above ₹10,000</label></div>
-      <div class="filter-group"><span class="filter-label">Color</span><label class="filter-option"><input type="checkbox" checked> Black</label><label class="filter-option"><input type="checkbox"> White</label><label class="filter-option"><input type="checkbox"> Brown</label><label class="filter-option"><input type="checkbox"> Red</label></div>
+      <div class="filter-group"><span class="filter-label">Category</span><label class="filter-option"><input type="checkbox" class="filter-category" value="Sneakers"> Sneakers</label><label class="filter-option"><input type="checkbox" class="filter-category" value="Boots"> Boots</label><label class="filter-option"><input type="checkbox" class="filter-category" value="Heels"> Heels</label><label class="filter-option"><input type="checkbox" class="filter-category" value="Formals"> Formals</label><label class="filter-option"><input type="checkbox" class="filter-category" value="Sandals"> Sandals</label></div>
+      <div class="filter-group"><span class="filter-label">Size (UK)</span><label class="filter-option"><input type="checkbox" class="filter-size" value="6"> 6</label><label class="filter-option"><input type="checkbox" class="filter-size" value="7"> 7</label><label class="filter-option"><input type="checkbox" class="filter-size" value="8"> 8</label><label class="filter-option"><input type="checkbox" class="filter-size" value="9"> 9</label><label class="filter-option"><input type="checkbox" class="filter-size" value="10"> 10</label></div>
+      <div class="filter-group"><span class="filter-label">Price Range</span><label class="filter-option"><input type="checkbox" class="filter-price" value="under5k"> Under ₹5,000</label><label class="filter-option"><input type="checkbox" class="filter-price" value="5k-10k"> ₹5,000 – ₹10,000</label><label class="filter-option"><input type="checkbox" class="filter-price" value="above10k"> Above ₹10,000</label></div>
+      <div class="filter-group"><span class="filter-label">Color</span><label class="filter-option"><input type="checkbox" class="filter-color" value="Black"> Black</label><label class="filter-option"><input type="checkbox" class="filter-color" value="White"> White</label><label class="filter-option"><input type="checkbox" class="filter-color" value="Brown"> Brown</label><label class="filter-option"><input type="checkbox" class="filter-color" value="Red"> Red</label></div>
     </div>
     <div class="shop-main">
-      <div class="shop-top"><div class="shop-count">Showing <strong>24</strong> of 84 products</div><select class="shop-sort"><option>Sort: Best Selling</option><option>Sort: Price Low–High</option><option>Sort: Price High–Low</option><option>Sort: Newest First</option></select></div>
+      <div class="shop-top">
+        <div class="shop-count" id="shop-count-text">Showing <strong>0</strong> of 0 products</div>
+        <div class="shop-controls" style="display:flex; gap:16px; align-items:center;">
+          <input type="text" id="shop-search" placeholder="Search products..." class="shop-search-input">
+          <select class="shop-sort" id="shop-sort">
+            <option value="best">Sort: Best Selling</option>
+            <option value="price-low">Sort: Price Low–High</option>
+            <option value="price-high">Sort: Price High–Low</option>
+            <option value="newest">Sort: Newest First</option>
+          </select>
+        </div>
+      </div>
       <div class="shop-grid" id="shop-grid"></div>
     </div>
   </div>

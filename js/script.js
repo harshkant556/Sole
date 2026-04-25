@@ -1,11 +1,45 @@
 // ---------- PRODUCT DATA ----------
   const products = [
-    { id:1, name:'AERO RUNNER X1', price:8999, oldPrice:12000, tag:'Bestseller', img:'https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero' },
-    { id:2, name:'URBAN TREK PRO', price:6499, tag:'New', img:'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8,9], collection:'terra' },
-    { id:3, name:'LUXE HEEL 005', price:11999, tag:'Limited', img:'https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir' },
-    { id:4, name:'OXFORD ELITE', price:9299, tag:'Classic', img:'https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10], collection:'classic' },
-    { id:5, name:'BREEZE SLIDE', price:3499, tag:'New', img:'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8], collection:'summer' },
-    { id:6, name:'URBAN PULSE V2', price:6799, tag:'', img:'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9], collection:'street' }
+    { id:1, name:'AERO RUNNER X1', price:8999, oldPrice:12000, tag:'Bestseller', img:'https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:2, name:'URBAN TREK PRO', price:6499, tag:'New', img:'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8,9], collection:'terra', category:'Boots', color:'Brown' },
+    { id:3, name:'LUXE HEEL 005', price:11999, tag:'Limited', img:'https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Black' },
+    { id:4, name:'OXFORD ELITE', price:9299, tag:'Classic', img:'https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10], collection:'classic', category:'Formals', color:'Brown' },
+    { id:5, name:'BREEZE SLIDE', price:3499, tag:'New', img:'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8], collection:'summer', category:'Sandals', color:'White' },
+    { id:6, name:'URBAN PULSE V2', price:6799, tag:'', img:'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9], collection:'street', category:'Sneakers', color:'Red' },
+    { id:7, name:'COASTAL DRIFT', price:5999, tag:'Hot', img:'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9], collection:'summer', category:'Sandals', color:'White' },
+    { id:8, name:'METRO WALKER', price:7499, tag:'New', img:'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10], collection:'street', category:'Sneakers', color:'Black' },
+    { id:9, name:'ECLIPSE RUN', price:9299, tag:'Limited', img:'https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'Black' },
+    { id:10, name:'TERRA CLASSIC', price:6799, tag:'', img:'https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8,9], collection:'terra', category:'Boots', color:'Brown' },
+    { id:11, name:'SUMMIT HIKE', price:4999, tag:'Sale', img:'https://images.pexels.com/photos/63464/pexels-photo-63464.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'terra', category:'Boots', color:'Red' },
+    { id:12, name:'VELOCITY X', price:10499, tag:'New', img:'https://images.pexels.com/photos/45057/pexels-photo-45057.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:13, name:'MIDNIGHT OXFORD', price:8799, tag:'', img:'https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'classic', category:'Formals', color:'Black' },
+    { id:14, name:'AMBER HEEL', price:12999, tag:'Limited', img:'https://images.pexels.com/photos/1335463/pexels-photo-1335463.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Red' },
+    { id:15, name:'DESERT STORM', price:7299, tag:'New', img:'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10], collection:'terra', category:'Boots', color:'Brown' },
+    { id:16, name:'SKY RUNNER', price:8499, tag:'', img:'https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:17, name:'ONIX LACE', price:9999, tag:'', img:'https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'classic', category:'Formals', color:'Black' },
+    { id:18, name:'TROPIC SLIDE', price:2999, tag:'Sale', img:'https://images.pexels.com/photos/1619488/pexels-photo-1619488.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8,9], collection:'summer', category:'Sandals', color:'White' },
+    { id:19, name:'URBAN FLOW', price:6299, tag:'New', img:'https://images.pexels.com/photos/1102734/pexels-photo-1102734.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'street', category:'Sneakers', color:'Black' },
+    { id:20, name:'NOIR VELVET', price:14999, tag:'Limited', img:'https://images.pexels.com/photos/1456737/pexels-photo-1456737.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Black' },
+    { id:21, name:'PEAK BOOT', price:8899, tag:'', img:'https://images.pexels.com/photos/267202/pexels-photo-267202.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10,11], collection:'terra', category:'Boots', color:'Brown' },
+    { id:22, name:'AERO LIGHT', price:7999, tag:'New', img:'https://images.pexels.com/photos/1032110/pexels-photo-1032110.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:23, name:'ROYAL DERBY', price:10999, tag:'', img:'https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'classic', category:'Formals', color:'Black' },
+    { id:24, name:'SAND DRIFT', price:3299, tag:'', img:'https://images.pexels.com/photos/1340645/pexels-photo-1340645.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[6,7,8,9], collection:'summer', category:'Sandals', color:'White' },
+    { id:25, name:'CITY PULSE', price:6999, tag:'Hot', img:'https://images.pexels.com/photos/1261160/pexels-photo-1261160.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'street', category:'Sneakers', color:'Black' },
+    { id:26, name:'STARE HEEL', price:11499, tag:'', img:'https://images.pexels.com/photos/1407354/pexels-photo-1407354.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Red' },
+    { id:27, name:'TRAIL BLAZER', price:7599, tag:'New', img:'https://images.pexels.com/photos/1280064/pexels-photo-1280064.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10,11], collection:'terra', category:'Boots', color:'Black' },
+    { id:28, name:'AERO GHOST', price:11999, tag:'Limited', img:'https://images.pexels.com/photos/1580232/pexels-photo-1580232.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:29, name:'MODERN MONK', price:9599, tag:'', img:'https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'classic', category:'Formals', color:'Brown' },
+    { id:30, name:'GLAM STILETO', price:13999, tag:'Limited', img:'https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Black' },
+    { id:31, name:'CORE SNEAK', price:5499, tag:'Sale', img:'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'street', category:'Sneakers', color:'Red' },
+    { id:32, name:'RUGGED EDGE', price:8299, tag:'New', img:'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10,11], collection:'terra', category:'Boots', color:'Brown' },
+    { id:33, name:'AERO SPEED', price:8999, tag:'', img:'https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:34, name:'ELITE LOAFER', price:7799, tag:'', img:'https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'classic', category:'Formals', color:'Brown' },
+    { id:35, name:'DIVA HEEL', price:15999, tag:'Premium', img:'https://images.pexels.com/photos/1335463/pexels-photo-1335463.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Red' },
+    { id:36, name:'URBAN EDGE', price:6899, tag:'', img:'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'street', category:'Sneakers', color:'Black' },
+    { id:37, name:'AERO PRIME', price:12499, tag:'Limited', img:'https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'Black' },
+    { id:38, name:'WILD TREK', price:5999, tag:'Sale', img:'https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[8,9,10,11], collection:'terra', category:'Boots', color:'Brown' },
+    { id:39, name:'AERO FLOW', price:9499, tag:'New', img:'https://images.pexels.com/photos/45057/pexels-photo-45057.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[7,8,9,10], collection:'aero', category:'Sneakers', color:'White' },
+    { id:40, name:'NOIR CLASSIC', price:10999, tag:'', img:'https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?auto=compress&cs=tinysrgb&w=400', sizes:[5,6,7,8], collection:'noir', category:'Heels', color:'Black' }
   ];
 
   // ---------- CART ----------
@@ -45,10 +79,21 @@
       </div>`).join('');
   }
 
-  function renderShop() {
+  function renderShop(productsToRender = products) {
     const grid = document.getElementById('shop-grid');
     if (!grid) return;
-    grid.innerHTML = products.map(p => `
+    
+    const countText = document.getElementById('shop-count-text');
+    if (countText) {
+      countText.innerHTML = `Showing <strong>${productsToRender.length}</strong> of ${products.length} products`;
+    }
+
+    if (productsToRender.length === 0) {
+      grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding: 40px; color: var(--muted-text);">No products found matching your filters.</div>';
+      return;
+    }
+
+    grid.innerHTML = productsToRender.map(p => `
       <div class="shop-card" onclick="openModal(${p.id})">
         <div class="shop-img"><span class="new-badge">${p.tag || 'NEW'}</span><img src="${p.img}" alt="${p.name}"></div>
         <div class="shop-card-info"><div class="shop-card-brand">SOLÉ</div><div class="shop-card-name">${p.name}</div>
@@ -57,6 +102,51 @@
           </div>
         </div>
       </div>`).join('');
+  }
+
+  function filterProducts() {
+    let filtered = [...products];
+
+    const searchInput = document.getElementById('shop-search');
+    if (searchInput && searchInput.value) {
+      const query = searchInput.value.toLowerCase();
+      filtered = filtered.filter(p => p.name.toLowerCase().includes(query));
+    }
+
+    const checkedCats = Array.from(document.querySelectorAll('.filter-category:checked')).map(cb => cb.value);
+    if (checkedCats.length > 0) {
+      filtered = filtered.filter(p => checkedCats.includes(p.category));
+    }
+
+    const checkedSizes = Array.from(document.querySelectorAll('.filter-size:checked')).map(cb => parseInt(cb.value));
+    if (checkedSizes.length > 0) {
+      filtered = filtered.filter(p => p.sizes.some(size => checkedSizes.includes(size)));
+    }
+
+    const checkedColors = Array.from(document.querySelectorAll('.filter-color:checked')).map(cb => cb.value);
+    if (checkedColors.length > 0) {
+      filtered = filtered.filter(p => checkedColors.includes(p.color));
+    }
+
+    const checkedPrices = Array.from(document.querySelectorAll('.filter-price:checked')).map(cb => cb.value);
+    if (checkedPrices.length > 0) {
+      filtered = filtered.filter(p => {
+        if (checkedPrices.includes('under5k') && p.price < 5000) return true;
+        if (checkedPrices.includes('5k-10k') && p.price >= 5000 && p.price <= 10000) return true;
+        if (checkedPrices.includes('above10k') && p.price > 10000) return true;
+        return false;
+      });
+    }
+
+    const sortSelect = document.getElementById('shop-sort');
+    if (sortSelect) {
+      const sortVal = sortSelect.value;
+      if (sortVal === 'price-low') filtered.sort((a, b) => a.price - b.price);
+      else if (sortVal === 'price-high') filtered.sort((a, b) => b.price - a.price);
+      else if (sortVal === 'newest') filtered.reverse();
+    }
+
+    renderShop(filtered);
   }
 
   function renderCollections() {
@@ -212,14 +302,17 @@
     renderCollections();
     updateCartUI();
 
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        showToast('📩 Message sent! We\'ll respond within 24 hours.');
-        contactForm.reset();
-      });
-    }
+    // Setup filter listeners
+    const filterInputs = document.querySelectorAll('.filter-category, .filter-size, .filter-price, .filter-color');
+    filterInputs.forEach(input => input.addEventListener('change', filterProducts));
+    
+    const searchInput = document.getElementById('shop-search');
+    if (searchInput) searchInput.addEventListener('input', filterProducts);
+    
+    const sortSelect = document.getElementById('shop-sort');
+    if (sortSelect) sortSelect.addEventListener('change', filterProducts);
+
+
 
     // --- Mobile Nav Toggle ---
     const navBar = document.querySelector('nav');

@@ -56,7 +56,7 @@
 
   /* ─── HERO ─── */
   .hero {
-    position: relative; height: calc(100vh - 72px); display: grid;
+    position: relative; min-height: calc(100vh - 72px); display: grid;
     grid-template-columns: 1fr 1fr; overflow: hidden;
     background: linear-gradient(145deg, #ffffff 0%, #eef2ff 100%);
   }
@@ -165,9 +165,31 @@
   .scroll-line { width: 2px; height: 60px; background: linear-gradient(to bottom, var(--primary-blue), transparent); animation: scrollLine 1.5s ease-in-out infinite; }
 
   /* MARQUEE */
-  .marquee-bar { background: var(--primary-blue); padding: 16px 0; overflow: hidden; white-space: nowrap; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .marquee-inner { display: inline-flex; animation: marquee 25s linear infinite; gap: 0; }
-  .marquee-item { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 4px; color: white; padding: 0 32px; }
+  .marquee-bar { 
+    background: rgba(30, 58, 138, 0.9); 
+    backdrop-filter: blur(12px);
+    padding: 20px 0; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 10;
+    margin-top: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .marquee-inner { display: inline-flex; animation: marquee 30s linear infinite; gap: 0; }
+  .marquee-bar:hover .marquee-inner { animation-play-state: paused; }
+  .marquee-item { 
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1.4rem; 
+    letter-spacing: 4px; 
+    color: white; 
+    padding: 0 40px; 
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  .marquee-item:hover { color: var(--accent-gold); transform: scale(1.1); cursor: default; }
   .marquee-dot { color: var(--accent-gold); font-size: 1.4rem; }
 
   /* SECTIONS */
@@ -329,6 +351,8 @@
   .shop-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
   .shop-count { font-size: 0.9rem; color: var(--muted-text); letter-spacing: 1px; }
   .shop-sort { background: white; border: 1px solid var(--border-light); color: var(--dark-text); padding: 10px 20px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; cursor: pointer; border-radius: 40px; }
+  .shop-search-input { background: white; border: 1px solid var(--border-light); color: var(--dark-text); padding: 10px 20px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; border-radius: 40px; outline: none; transition: border-color 0.3s; width: 220px; }
+  .shop-search-input:focus { border-color: var(--primary-blue); }
   .shop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .shop-card { background: white; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
   .shop-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
