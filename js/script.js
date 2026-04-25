@@ -221,6 +221,21 @@
       });
     }
 
+    // --- Mobile Nav Toggle ---
+    const navBar = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    if (navBar && navLinks) {
+      const hamburger = document.createElement('div');
+      hamburger.className = 'hamburger-menu';
+      hamburger.innerHTML = '<span></span><span></span><span></span>';
+      navBar.appendChild(hamburger);
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+      });
+    }
+
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
       if (window.scrollY > 40) { nav.style.background='rgba(255,255,255,0.98)'; nav.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)'; }
