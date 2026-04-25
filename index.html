@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLÉ — Premium Footwear</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <div class="nav-logo" style="cursor:pointer;" onclick="window.location.href='index.html'">SOL<span>É</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="collections.html" id="nav-collections">Collections</a></li>
+    <li><a href="shop.html" id="nav-shop">Shop</a></li>
+    <li><a href="about.html" id="nav-about">About Us</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    <li><a href="login.html" id="nav-login" class="nav-cta">Login</a></li>
+    <li><a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════ HOME PAGE ════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO (enhanced – original structure kept, stats + floating card added) -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">✦ New Season 2025</div>
+      <h1 class="hero-title">STEP<br><span class="blue">INTO</span><br><span class="hero-italic">greatness</span></h1>
+      <p class="hero-sub">Crafted for those who move with purpose. Each sole tells a story of unmatched precision and timeless style.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="window.location.href='shop.html'"><span>Shop Now</span></button>
+        <button class="btn-outline" onclick="window.location.href='collections.html'">Explore Collection</button>
+      </div>
+      <!-- NEW: mini stats under buttons -->
+      <div class="hero-stats-row">
+        <div class="hero-stat"><div class="hero-stat-num">200+</div><div class="hero-stat-label">Styles</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">50K+</div><div class="hero-stat-label">Customers</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">4.9★</div><div class="hero-stat-label">Rating</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img class="hero-bg-image" src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Premium Sneakers" crossorigin="anonymous">
+      <div class="hero-badge"><div class="badge-num">SS</div><div class="badge-text">2025</div></div>
+      <!-- NEW: floating award card over hero image -->
+      <div class="hero-floating-card">
+        <div class="fc-icon">🏆</div>
+        <div>
+          <div class="fc-label">Award Winning</div>
+          <div class="fc-val">Best Footwear Brand</div>
+        </div>
+      </div>
+      <!-- NEW: scroll indicator pill -->
+      <div class="hero-scroll-pill">
+        <div class="scroll-pill-dot"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE (original) -->
+  <div class="marquee-bar"><div class="marquee-inner"><span class="marquee-item">SOLE COLLECTION</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">NEW ARRIVALS 2025</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">PREMIUM FOOTWEAR</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">STEP INTO STYLE</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">HANDCRAFTED SOLES</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">FREE SHIPPING</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">SOLE COLLECTION</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">NEW ARRIVALS 2025</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">PREMIUM FOOTWEAR</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">STEP INTO STYLE</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">HANDCRAFTED SOLES</span><span class="marquee-dot"> ◆ </span><span class="marquee-item">FREE SHIPPING</span><span class="marquee-dot"> ◆ </span></div></div>
+
+  <!-- NEW: Brands trusted by strip -->
+  <div class="brands-strip">
+    <span class="brands-label">Trusted by style icons across India</span>
+    <div class="brands-list">
+      <span class="brand-pill">NIKE</span>
+      <span class="brand-pill">ADIDAS</span>
+      <span class="brand-pill">PUMA</span>
+      <span class="brand-pill">REEBOK</span>
+      <span class="brand-pill">VANS</span>
+    </div>
+  </div>
+
+  <!-- FEATURED PRODUCTS (original) -->
+  <section class="section">
+    <div class="section-header"><div><div class="section-label">✦ New Arrivals</div><div class="section-title">FEATURED DROPS</div></div><button class="btn-outline" onclick="window.location.href='shop.html'">View All</button></div>
+    <div class="products-grid" id="featured-products"></div>
+  </section>
+
+  <!-- NEW: Why Us strip -->
+  <div class="why-strip">
+    <div class="why-item"><div class="why-icon">🚚</div><div class="why-title">FREE DELIVERY</div><div class="why-desc">Free shipping on all orders above ₹999 across India, delivered in 2–4 days.</div></div>
+    <div class="why-item"><div class="why-icon">🔄</div><div class="why-title">30-DAY RETURNS</div><div class="why-desc">Hassle-free returns within 30 days. No questions asked, fully refunded.</div></div>
+    <div class="why-item"><div class="why-icon">🛡️</div><div class="why-title">2-YEAR WARRANTY</div><div class="why-desc">Every pair backed by a 2-year craftsmanship warranty. We stand by every stitch.</div></div>
+    <div class="why-item"><div class="why-icon">🌿</div><div class="why-title">ECO MATERIALS</div><div class="why-desc">Responsibly sourced leathers and sustainable production in every pair.</div></div>
+  </div>
+
+  <!-- NEW: Trending / More shoes section -->
+  <section class="trending-section">
+    <div class="section-header">
+      <div><div class="section-label">✦ Trending Now</div><div class="section-title">HOT THIS WEEK</div></div>
+      <button class="btn-outline" onclick="window.location.href='shop.html'">Browse All</button>
+    </div>
+    <div class="trending-scroll">
+      <div class="trend-card" onclick="window.location.href='shop.html'">
+        <div class="trend-img"><span class="trend-badge">🔥 Hot</span><img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shoe"></div>
+        <div class="trend-info"><div class="trend-name">COASTAL DRIFT</div><div class="trend-price">₹5,999</div></div>
+      </div>
+      <div class="trend-card" onclick="window.location.href='shop.html'">
+        <div class="trend-img"><span class="trend-badge">New</span><img src="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shoe"></div>
+        <div class="trend-info"><div class="trend-name">METRO WALKER</div><div class="trend-price">₹7,499</div></div>
+      </div>
+      <div class="trend-card" onclick="window.location.href='shop.html'">
+        <div class="trend-img"><span class="trend-badge">Limited</span><img src="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shoe"></div>
+        <div class="trend-info"><div class="trend-name">ECLIPSE RUN</div><div class="trend-price">₹9,299</div></div>
+      </div>
+      <div class="trend-card" onclick="window.location.href='shop.html'">
+        <div class="trend-img"><img src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shoe"></div>
+        <div class="trend-info"><div class="trend-name">TERRA CLASSIC</div><div class="trend-price">₹6,799</div></div>
+      </div>
+      <div class="trend-card" onclick="window.location.href='shop.html'">
+        <div class="trend-img"><span class="trend-badge">Sale</span><img src="https://images.pexels.com/photos/63464/pexels-photo-63464.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Shoe"></div>
+        <div class="trend-info"><div class="trend-name">SUMMIT HIKE</div><div class="trend-price">₹4,999</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (original) -->
+  <section class="testimonials">
+    <div class="section-header"><div><div class="section-label">✦ What People Say</div><div class="section-title">CUSTOMER LOVE</div></div></div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><div class="testimonial-text">"Absolutely stunning quality and comfort. The Aero Runner X1 has become my daily driver."</div><div class="testimonial-author"><div class="author-avatar">R</div><div class="author-info"><h4>Rahul Mehta</h4><p>Mumbai</p></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">"Customer service was exceptional, and the shoes feel like they were made just for me."</div><div class="testimonial-author"><div class="author-avatar">P</div><div class="author-info"><h4>Priya Sharma</h4><p>Delhi</p></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-text">"The Terra Force boots survived a Himalayan trek and still look brand new."</div><div class="testimonial-author"><div class="author-avatar">A</div><div class="author-info"><h4>Arjun Nair</h4><p>Bangalore</p></div></div></div>
+    </div>
+  </section>
+
+  <!-- NEW: Big CTA Banner -->
+  <div class="banner-cta">
+    <div>
+      <div class="banner-cta-label">✦ Limited Time Offer</div>
+      <div class="banner-cta-title">YOUR NEXT STEP<br>STARTS <span>HERE</span></div>
+      <div class="banner-cta-sub">Shop our summer collection and get free express delivery + a complimentary care kit with every order above ₹7,000.</div>
+      <div style="display:flex;gap:14px;margin-top:28px;">
+        <button class="btn-primary" style="background:white;color:var(--primary-blue);" onclick="window.location.href='shop.html'"><span>Shop the Sale</span></button>
+        <button class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;" onclick="window.location.href='collections.html'">View Collections</button>
+      </div>
+    </div>
+    <div class="banner-cta-right">
+      <div class="banner-discount">
+        <div class="bd-num">30%</div>
+        <div class="bd-text">Off Today</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTAGRAM (original) -->
+  <section class="instagram-feed">
+    <div class="section-label">✦ Follow Us</div><h3 style="font-family:'Bebas Neue',sans-serif;font-size:2.8rem;letter-spacing:2px;color:var(--dark-text);margin-bottom:16px;">@SOLE_INDIA</h3>
+    <div class="insta-grid">
+      <div class="insta-item"><img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Insta shoe 1"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Insta shoe 2"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Insta shoe 3"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Insta shoe 4"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/63464/pexels-photo-63464.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Insta shoe 5"></div>
+      <div class="insta-item"><img src="https://images.pexels.com/photos/45057/pexels-photo-45057.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Insta shoe 6"></div>
+    </div>
+  </section>
+
+</div><!-- end home -->
+
+<!-- NEWSLETTER (original structure, subscribe now works) -->
+<section class="newsletter">
+  <div>
+    <h3>STAY IN THE LOOP</h3>
+    <p style="opacity:0.9;">Subscribe for exclusive drops and early access.</p>
+  </div>
+  <div class="newsletter-form">
+    <input type="email" id="newsletter-email" placeholder="Your email address">
+    <button onclick="handleSubscribe()">Subscribe →</button>
+  </div>
+</section>
+
+<!-- FOOTER (original) -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">SOL<span>É</span></div>
+      <div class="footer-tagline">Crafting premium footwear for those who walk with purpose. Style, soul, and substance — in every step.</div>
+      <div class="social-links">
+        <div class="social-btn">𝕏</div>
+        <div class="social-btn">in</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">▶</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">NAVIGATE</div>
+      <ul class="footer-links">
+        <li><a href="#" onclick="window.location.href='index.html'">Home</a></li>
+        <li><a href="#" onclick="window.location.href='collections.html'">Collections</a></li>
+        <li><a href="#" onclick="window.location.href='shop.html'">Shop</a></li>
+        <li><a href="#" onclick="window.location.href='about.html'">About Us</a></li>
+        <li><a href="#" onclick="window.location.href='contact.html'">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">SUPPORT</div>
+      <ul class="footer-links">
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns & Exchange</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">LEGAL</div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>SOLÉ</span> Premium Footwear. All rights reserved.</div>
+    <div class="footer-copy">Crafted with ❤ in Mumbai, India</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-product" id="modal-product-content"></div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span id="toast-msg">Subscribed successfully!</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

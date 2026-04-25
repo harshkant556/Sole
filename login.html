@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLÉ — Premium Footwear</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <div class="nav-logo" style="cursor:pointer;" onclick="window.location.href='index.html'">SOL<span>É</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="collections.html" id="nav-collections">Collections</a></li>
+    <li><a href="shop.html" id="nav-shop">Shop</a></li>
+    <li><a href="about.html" id="nav-about">About Us</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    <li><a href="login.html" id="nav-login" class="nav-cta">Login</a></li>
+    <li><a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════ LOGIN PAGE (REDESIGNED) ════════════════ -->
+<div id="page-login" class="page active">
+  <div class="login-page-wrap">
+
+    <!-- Left visual panel -->
+    <div class="login-visual">
+      <div class="lv-logo">SOL<span>É</span></div>
+      <div class="lv-tagline">Premium Footwear Since 2012</div>
+      <div class="lv-shoe">👟</div>
+      <div class="lv-quote">"The right pair of shoes can change your life."</div>
+      <div class="lv-dots">
+        <div class="lv-dot active"></div>
+        <div class="lv-dot"></div>
+        <div class="lv-dot"></div>
+      </div>
+    </div>
+
+    <!-- Right form panel -->
+    <div class="login-form-panel">
+      <div class="login-box">
+        <!-- Tabs -->
+        <div class="login-tabs">
+          <div class="login-tab active" onclick="switchLoginTab('login')">Login</div>
+          <div class="login-tab" onclick="switchLoginTab('signup')">Sign Up</div>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="login-form" class="login-form active">
+          <div class="login-title">Welcome Back 👋</div>
+          <div class="login-subtitle">Log in to access your orders, wishlist, and exclusive member offers.</div>
+          <div class="lf-group"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+          <div class="lf-group"><label>Password</label><input type="password" id="login-pwd" placeholder="Enter your password"></div>
+          <div class="lf-row">
+            <label class="lf-check"><input type="checkbox"> Remember me</label>
+            <a href="#" class="lf-forgot">Forgot password?</a>
+          </div>
+          <button class="btn-login" onclick="handleLogin()">LOG IN →</button>
+          <div class="lf-divider"><span>or continue with</span></div>
+          <div class="social-login">
+            <button class="social-login-btn"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> Google</button>
+            <button class="social-login-btn"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 11.46c-.02-2.45 2.01-3.64 2.1-3.69-1.15-1.68-2.94-1.92-3.57-1.94-1.51-.15-2.95.89-3.72.89-.78 0-1.95-.87-3.21-.85-1.62.02-3.12.94-3.95 2.4-1.68 2.92-.43 7.23 1.22 9.6.81 1.16 1.76 2.45 3.02 2.41 1.21-.04 1.69-.78 3.16-.78 1.46 0 1.91.78 3.18.75 1.3-.02 2.13-1.17 2.93-2.33 1.12-1.64 1.58-3.23 1.6-3.32-.04-.02-2.73-1.04-2.76-3.14zM14.94 4.54c.67-.81 1.12-1.94.99-3.04-1.01.04-2.19.67-2.88 1.5-.6.71-1.13 1.87-.98 2.95 1.12.09 2.22-.61 2.87-1.41z" fill="#000000"/></svg> Apple</button>
+          </div>
+          <div class="lf-switch">Don't have an account? <a onclick="switchLoginTab('signup')">Sign up free</a></div>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div id="signup-form" class="login-form">
+          <div class="login-title">Create Account ✨</div>
+          <div class="login-subtitle">Join 50,000+ style-forward customers. Get early access to new drops and exclusive deals.</div>
+          <div class="lf-group"><label>Full Name</label><input type="text" placeholder="Enter your name"></div>
+          <div class="lf-group"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+          <div class="lf-group">
+            <label>Password</label>
+            <input type="password" id="signup-pwd" placeholder="Create a strong password" oninput="checkStrength(this.value)">
+            <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+          </div>
+          <div class="lf-group"><label>Confirm Password</label><input type="password" placeholder="Confirm your password"></div>
+          <button class="btn-login" onclick="handleSignup()">CREATE ACCOUNT →</button>
+          <div class="lf-divider"><span>or sign up with</span></div>
+          <div class="social-login">
+            <button class="social-login-btn"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> Google</button>
+            <button class="social-login-btn"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 11.46c-.02-2.45 2.01-3.64 2.1-3.69-1.15-1.68-2.94-1.92-3.57-1.94-1.51-.15-2.95.89-3.72.89-.78 0-1.95-.87-3.21-.85-1.62.02-3.12.94-3.95 2.4-1.68 2.92-.43 7.23 1.22 9.6.81 1.16 1.76 2.45 3.02 2.41 1.21-.04 1.69-.78 3.16-.78 1.46 0 1.91.78 3.18.75 1.3-.02 2.13-1.17 2.93-2.33 1.12-1.64 1.58-3.23 1.6-3.32-.04-.02-2.73-1.04-2.76-3.14zM14.94 4.54c.67-.81 1.12-1.94.99-3.04-1.01.04-2.19.67-2.88 1.5-.6.71-1.13 1.87-.98 2.95 1.12.09 2.22-.61 2.87-1.41z" fill="#000000"/></svg> Apple</button>
+          </div>
+          <div class="lf-terms">By signing up you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</div>
+          <div class="lf-switch">Already have an account? <a onclick="switchLoginTab('login')">Log in</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>                
+</div><!-- end login -->
+
+<!-- NEWSLETTER (original structure, subscribe now works) -->
+<section class="newsletter">
+  <div>
+    <h3>STAY IN THE LOOP</h3>
+    <p style="opacity:0.9;">Subscribe for exclusive drops and early access.</p>
+  </div>
+  <div class="newsletter-form">
+    <input type="email" id="newsletter-email" placeholder="Your email address">
+    <button onclick="handleSubscribe()">Subscribe →</button>
+  </div>
+</section>
+
+<!-- FOOTER (original) -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">SOL<span>É</span></div>
+      <div class="footer-tagline">Crafting premium footwear for those who walk with purpose. Style, soul, and substance — in every step.</div>
+      <div class="social-links">
+        <div class="social-btn">𝕏</div>
+        <div class="social-btn">in</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">▶</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">NAVIGATE</div>
+      <ul class="footer-links">
+        <li><a href="#" onclick="window.location.href='index.html'">Home</a></li>
+        <li><a href="#" onclick="window.location.href='collections.html'">Collections</a></li>
+        <li><a href="#" onclick="window.location.href='shop.html'">Shop</a></li>
+        <li><a href="#" onclick="window.location.href='about.html'">About Us</a></li>
+        <li><a href="#" onclick="window.location.href='contact.html'">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">SUPPORT</div>
+      <ul class="footer-links">
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns & Exchange</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">LEGAL</div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>SOLÉ</span> Premium Footwear. All rights reserved.</div>
+    <div class="footer-copy">Crafted with ❤ in Mumbai, India</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-product" id="modal-product-content"></div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span id="toast-msg">Subscribed successfully!</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLÉ — Premium Footwear</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ─── NAVBAR ─── -->
+<nav>
+  <div class="nav-logo" style="cursor:pointer;" onclick="window.location.href='index.html'">SOL<span>É</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home">Home</a></li>
+    <li><a href="collections.html" id="nav-collections">Collections</a></li>
+    <li><a href="shop.html" id="nav-shop">Shop</a></li>
+    <li><a href="about.html" id="nav-about">About Us</a></li>
+    <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    <li><a href="login.html" id="nav-login" class="nav-cta">Login</a></li>
+    <li><a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════ OUR PROCESS PAGE (NEW) ════════════════ -->
+<div id="page-process" class="page active">
+  <div class="process-hero">
+    <div class="process-hero-label">✦ Behind The Shoe</div>
+    <div class="process-hero-title">OUR <span>PROCESS</span></div>
+    <div class="process-hero-sub">From a sketch on paper to the shoe on your foot — every SOLÉ pair passes through 6 stages of obsessive craftsmanship. Here's how we do it.</div>
+    <div style="margin-top:32px;"><button class="btn-outline" style="border-color:rgba(255,255,255,0.4);color:white;" onclick="window.location.href='about.html'">← Back to About Us</button></div>
+  </div>
+
+  <div class="process-steps">
+    <div class="section-label">✦ Six Stages of Perfection</div>
+    <div class="section-title" style="color:var(--dark-text);">FROM CONCEPT TO CREATION</div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-num">01</div><div class="step-icon">✏️</div><div class="step-title">DESIGN & SKETCH</div><div class="step-desc">Every shoe begins as a hand-drawn sketch. Our designers spend weeks refining silhouettes, proportions, and style lines before a single material is chosen. We draw inspiration from architecture, nature, and street culture.</div></div>
+      <div class="step-card"><div class="step-num">02</div><div class="step-icon">🧵</div><div class="step-title">MATERIAL SOURCING</div><div class="step-desc">We source full-grain calfskin leather from certified tanneries, breathable performance meshes from Japanese mills, and recycled rubber compounds for our outsoles. Every material is tested for durability and feel before approval.</div></div>
+      <div class="step-card"><div class="step-num">03</div><div class="step-icon">🔨</div><div class="step-title">LAST CRAFTING</div><div class="step-desc">The "last" is the foot-shaped mould that defines the shoe's fit. Our master last-makers carve each last by hand, ensuring perfect anatomical alignment and consistent sizing across every style and size run.</div></div>
+      <div class="step-card"><div class="step-num">04</div><div class="step-icon">✂️</div><div class="step-title">CUTTING & STITCHING</div><div class="step-desc">Leather panels are hand-cut using precision steel dies to eliminate waste. Skilled craftspeople then stitch each component together with thread tensioned to exact specification — up to 8 stitches per centimetre.</div></div>
+      <div class="step-card"><div class="step-num">05</div><div class="step-icon">🎨</div><div class="step-title">FINISHING & COLOUR</div><div class="step-desc">Edge painting, burnishing, heel-seat fitting, and colour application are done entirely by hand. A single shoe passes through 12 pairs of hands before it receives our quality stamp. No machines allowed in this stage.</div></div>
+      <div class="step-card"><div class="step-num">06</div><div class="step-icon">✅</div><div class="step-title">QUALITY CONTROL</div><div class="step-desc">Each finished pair undergoes a 47-point inspection — from stitch density and last shape to colorfastness and sole adhesion. Fewer than 2% of pairs pass on the first check. The rest are reworked until they're perfect.</div></div>
+    </div>
+  </div>
+
+  <div class="process-materials">
+    <div class="section-label">✦ What Goes Inside</div>
+    <div class="section-title" style="color:var(--dark-text);">MATERIALS WE LOVE</div>
+    <div class="materials-grid">
+      <div class="materials-img"><img src="https://images.pexels.com/photos/298864/pexels-photo-298864.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Materials"></div>
+      <div class="materials-list">
+        <div class="mat-item"><div class="mat-icon">🌾</div><div><div class="mat-title">FULL-GRAIN LEATHER</div><div class="mat-desc">The highest quality cut, sourced from certified tanneries. Develops a rich patina over time and lasts decades with proper care.</div></div></div>
+        <div class="mat-item"><div class="mat-icon">☁️</div><div><div class="mat-title">CLOUD FOAM MIDSOLE</div><div class="mat-desc">Our proprietary EVA-blend compound provides 38% more energy return than standard foam. Engineered to stay responsive for 1,000+ km.</div></div></div>
+        <div class="mat-item"><div class="mat-icon">♻️</div><div><div class="mat-title">RECYCLED RUBBER OUTSOLE</div><div class="mat-desc">60% post-consumer recycled rubber with a carbon-textured grip pattern. Each pair saves approximately 120g of landfill material.</div></div></div>
+        <div class="mat-item"><div class="mat-icon">🧊</div><div><div class="mat-title">AEROMESH UPPER</div><div class="mat-desc">Proprietary knit technology — 40% more breathable than standard mesh, moisture-wicking, and designed to adapt to foot shape over time.</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="process-stats">
+    <div class="p-stat"><div class="p-stat-num">12</div><div class="p-stat-label">Artisans Per Pair</div></div>
+    <div class="p-stat"><div class="p-stat-num">47</div><div class="p-stat-label">Quality Checkpoints</div></div>
+    <div class="p-stat"><div class="p-stat-num">6</div><div class="p-stat-label">Production Stages</div></div>
+    <div class="p-stat"><div class="p-stat-num">98%</div><div class="p-stat-label">Customer Satisfaction</div></div>
+  </div>
+</div><!-- end process -->
+
+<!-- NEWSLETTER (original structure, subscribe now works) -->
+<section class="newsletter">
+  <div>
+    <h3>STAY IN THE LOOP</h3>
+    <p style="opacity:0.9;">Subscribe for exclusive drops and early access.</p>
+  </div>
+  <div class="newsletter-form">
+    <input type="email" id="newsletter-email" placeholder="Your email address">
+    <button onclick="handleSubscribe()">Subscribe →</button>
+  </div>
+</section>
+
+<!-- FOOTER (original) -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">SOL<span>É</span></div>
+      <div class="footer-tagline">Crafting premium footwear for those who walk with purpose. Style, soul, and substance — in every step.</div>
+      <div class="social-links">
+        <div class="social-btn">𝕏</div>
+        <div class="social-btn">in</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">▶</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">NAVIGATE</div>
+      <ul class="footer-links">
+        <li><a href="#" onclick="window.location.href='index.html'">Home</a></li>
+        <li><a href="#" onclick="window.location.href='collections.html'">Collections</a></li>
+        <li><a href="#" onclick="window.location.href='shop.html'">Shop</a></li>
+        <li><a href="#" onclick="window.location.href='about.html'">About Us</a></li>
+        <li><a href="#" onclick="window.location.href='contact.html'">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">SUPPORT</div>
+      <ul class="footer-links">
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns & Exchange</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">LEGAL</div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>SOLÉ</span> Premium Footwear. All rights reserved.</div>
+    <div class="footer-copy">Crafted with ❤ in Mumbai, India</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-product" id="modal-product-content"></div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span id="toast-msg">Subscribed successfully!</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
